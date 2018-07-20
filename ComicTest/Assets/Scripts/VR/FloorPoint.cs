@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorPoint : MonoBehaviour {
+public class FloorPoint : VrTarget {
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class FloorPoint : MonoBehaviour {
 		
 	}
 
-	public void HitLog(string p_log) {
-		Debug.Log(p_log);
+	public override void OnVrRunEvent() {
+		VrPlayerManager.instance.SetFloorPoint(this);
 	}
 }

@@ -1,6 +1,8 @@
 /Library
 /obj
 /Temp
-Assembly-CSharp.csproj
-Assembly-CSharp-Editor.csproj
-ComicTest.sln
+/Assembly-CSharp.csproj
+/Assembly-CSharp-Editor.csproj
+/ComicTest.sln
+/ComicTest.userprefs
+/Assembly-CSharp-firstpass.csproj
