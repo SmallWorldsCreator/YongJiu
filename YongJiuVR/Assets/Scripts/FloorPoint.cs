@@ -23,4 +23,10 @@ public class FloorPoint : VrTarget {
 	public override void OnCloseTarget() {
 		gameObject.SetActive (false);
 	}
+
+	void OnDrawGizmosSelected() {
+		foreach (VrTarget _target in canSeeTargets) {
+			Gizmos.DrawLine (transform.position, _target.transform.position);
+		}
+	}
 }
