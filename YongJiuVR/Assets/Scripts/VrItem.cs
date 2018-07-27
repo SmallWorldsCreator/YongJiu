@@ -7,32 +7,43 @@ public class VrItem : VrTarget {
 	[NullAlarm]public Animator Anime;
 	// Use this for initialization
 	void Start () {
-		Anime.Play ("HideInfo", -1, 1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+	public override void OnVrPointEnter() {
+		if (nowLookItem != null) {
+			nowLookItem.HideInfo ();
+		}
+	}
 
 	public override void OnVrRunEvent() {
-		Show ();
+		ShowInfo ();
 	}
 
 	public void OnBecameInvisible(){
-		Hide ();
+		HideInfo ();
 	}
 
-	public void Show(){
-		if (nowLookItem != null) {
-			nowLookItem.Hide ();
-		}
+	public void ShowInfo(){		
 		nowLookItem = this;
-		Anime.Play ("ShowInfo", -1, 0);
+		Anime.SetBool ("Show", true);
 	}
 
-	public void Hide(){
-		nowLookItem = null;
-		Anime.Play ("HideInfo", -1, 0);
+	public void HideInfo(){
+		if (nowLookItem == this) {
+			VrTargetManager.instance.StartCoroutine (IeHideInfo ());
+		}
 	}
+
+	IEnumerator IeHideInfo(){
+		nowLookItem = null;
+		Anime.SetBool ("Show", false);
+		yield return new WaitForSeconds (0.25f);
+		OnHideInfo ();
+	}
+	public virtual void OnHideInfo() {}
+
 }

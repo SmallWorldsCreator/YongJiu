@@ -338,6 +338,88 @@ public class ShowIfDrawer : PropertyDrawer {
 #endif
 #endregion
 
+#region "[ChangeCallAttribute(函式名)] = 值變化時檢查"
+public class ChangeCallAttribute : PropertyAttribute  {	
+	public string FunName;
+	public bool isFirst;
+	public ChangeCallAttribute(string p_name) {
+		FunName = p_name;
+		isFirst = true;
+	}
+}
+#if UNITY_EDITOR
+[CustomPropertyDrawer (typeof (ChangeCallAttribute))]
+public class ChangeCallDrawer : PropertyDrawer {
+	public override void OnGUI (Rect p_position, SerializedProperty p_property, GUIContent p_Label) {
+		ChangeCallAttribute _checker = attribute as ChangeCallAttribute;
+
+		EditorGUI.BeginChangeCheck ();
+		Rect _Position = p_position;
+		EditorGUI.PropertyField (_Position,p_property);
+
+		if (EditorGUI.EndChangeCheck () || _checker.isFirst) {
+			_checker.isFirst=false;
+			Call (p_property, _checker.FunName);
+		}
+	}
+	public void Call(SerializedProperty p_property,string p_FunName){ 
+		object _obj=p_property.serializedObject.targetObject;
+		MethodInfo _method = _obj.GetType().GetMethod(p_FunName);
+		object[] _arg=new object[1];
+
+		switch (p_property.propertyType) {
+		case SerializedPropertyType.Integer:
+			_arg[0] = p_property.intValue;
+			break;
+		case SerializedPropertyType.String:
+			_arg[0] = p_property.stringValue;
+			break;
+		case SerializedPropertyType.Boolean:
+			_arg[0] = p_property.boolValue;
+			break;
+		case SerializedPropertyType.Float:
+			_arg[0] = p_property.floatValue;
+			break;
+		case SerializedPropertyType.Enum:
+			_arg[0] = p_property.enumValueIndex;
+			break;
+		case SerializedPropertyType.LayerMask:
+			_arg[0] = p_property.intValue;
+			break;
+		case SerializedPropertyType.ObjectReference:
+			_arg[0] = p_property.objectReferenceValue;
+			break;
+		case SerializedPropertyType.Color:
+			_arg[0] = p_property.colorValue;
+			break;
+		case SerializedPropertyType.AnimationCurve:
+			_arg[0] = p_property.animationCurveValue;
+			break;
+		case SerializedPropertyType.Rect:
+			_arg[0] = p_property.rectValue;
+			break;
+		case SerializedPropertyType.Bounds:
+			_arg[0] = p_property.boundsValue;
+			break;		
+		case SerializedPropertyType.Vector2:
+			_arg[0] = p_property.vector2Value;
+			break;
+		case SerializedPropertyType.Vector3:
+			_arg[0] = p_property.vector3Value;
+			break;
+		case SerializedPropertyType.Vector4:
+			_arg[0] = p_property.vector4Value;
+			break;
+		default:
+			Debug.LogError("[ChangeCall] Not support this type");
+			return;
+		}
+		_method.Invoke(_obj,_arg);
+	}
+}
+#endif
+#endregion
+
 #region "[CopyPaste] = 複製貼上按鈕"
 public class CopyPasteAttribute : PropertyAttribute  {	
 	public static object sourceObj = null;

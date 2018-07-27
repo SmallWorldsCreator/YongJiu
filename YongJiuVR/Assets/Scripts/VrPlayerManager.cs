@@ -10,6 +10,8 @@ public class VrPlayerManager : ManagerBase<VrPlayerManager> {
 	E_VR_PLAYER_STATE state;
 	[NullAlarm]public VrPlayer player;
 	[NullAlarm]public GvrUIPointer pointer;
+
+
 	// Use this for initialization
 	void Start () {
 	}
