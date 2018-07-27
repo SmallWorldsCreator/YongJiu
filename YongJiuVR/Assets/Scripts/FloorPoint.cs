@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FloorPoint : VrTarget {
 	public VrTarget[] canSeeTargets;
-	public Collider collider;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,5 +16,11 @@ public class FloorPoint : VrTarget {
 
 	public override void OnVrRunEvent() {
 		VrPlayerManager.instance.SetFloorPoint(this);
+	}
+	public override void OnOpenTarget() {
+		gameObject.SetActive (true);
+	}
+	public override void OnCloseTarget() {
+		gameObject.SetActive (false);
 	}
 }

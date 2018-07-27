@@ -37,16 +37,20 @@ public class VrPlayerManager : ManagerBase<VrPlayerManager> {
 			switch(state){
 			case E_VR_PLAYER_STATE.idle:
 				pointer.enabled = true;
+				VrTargetManager.instance.OpenTargetAtFloorPoint (nowFloorPoint);
 				break;
 			case E_VR_PLAYER_STATE.move:
 				pointer.enabled = false;
+				VrTargetManager.instance.CloseAllTarget ();
 				break;
 			}
 		}
 	}
 
+	FloorPoint nowFloorPoint;
 	public void SetFloorPoint(FloorPoint p_floorPoint){
-		player.SetTargetPos(p_floorPoint.transform.position);
+		nowFloorPoint = p_floorPoint;
+		player.SetTargetPos(nowFloorPoint.transform.position);
 		ChangeState(E_VR_PLAYER_STATE.move);
 	}
 }

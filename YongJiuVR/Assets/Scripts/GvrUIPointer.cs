@@ -44,7 +44,7 @@ public class GvrUIPointer : GvrBasePointer {
 	public override float MaxPointerDistance { get { return maxReticleDistance; } }
 
 	public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive) {
-		Debug.Log("OnPointerEnter");
+//		Debug.Log("OnPointerEnter");
 		lookObj = raycastResultResult.gameObject.GetComponent<VrTarget>();
 		if(lookObj != null){
 			centerPoint.color = Color.red;
@@ -59,7 +59,7 @@ public class GvrUIPointer : GvrBasePointer {
 	}
 
 	public override void OnPointerExit(GameObject previousObject) {
-		Debug.Log("OnPointerExit");
+//		Debug.Log("OnPointerExit");
 		if(lookObj != null){
 			lookObj.OnVrPointExit();
 		}
