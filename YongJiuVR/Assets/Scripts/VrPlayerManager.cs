@@ -1,0 +1,52 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum E_VR_PLAYER_STATE{
+	idle,
+	move
+}
+public class VrPlayerManager : ManagerBase<VrPlayerManager> {
+	E_VR_PLAYER_STATE state;
+	[NullAlarm]public VrPlayer player;
+	[NullAlarm]public GvrUIPointer pointer;
+	// Use this for initialization
+	void Start () {
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		switch(state){
+		case E_VR_PLAYER_STATE.idle:	IdleUpdate();	break;
+		case E_VR_PLAYER_STATE.move:	MoveUpdate();	break;
+		}
+	}
+
+	void IdleUpdate () {
+	}
+
+	void MoveUpdate () {
+		if(!player.isMoving){
+			ChangeState(E_VR_PLAYER_STATE.idle);
+		}
+	}
+
+	void ChangeState (E_VR_PLAYER_STATE p_state) {
+		if(state != p_state){
+			state = p_state;
+			switch(state){
+			case E_VR_PLAYER_STATE.idle:
+				pointer.enabled = true;
+				break;
+			case E_VR_PLAYER_STATE.move:
+				pointer.enabled = false;
+				break;
+			}
+		}
+	}
+
+	public void SetFloorPoint(FloorPoint p_floorPoint){
+		player.SetTargetPos(p_floorPoint.transform.position);
+		ChangeState(E_VR_PLAYER_STATE.move);
+	}
+}
