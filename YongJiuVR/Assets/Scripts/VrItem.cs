@@ -15,35 +15,28 @@ public class VrItem : VrTarget {
 	}
 	public override void OnVrPointEnter() {
 		if (nowLookItem != null) {
-			nowLookItem.HideInfo ();
+			nowLookItem.HideContent ();
 		}
 	}
 
 	public override void OnVrRunEvent() {
-		ShowInfo ();
+		ShowContent ();
 	}
 
 	public void OnBecameInvisible(){
-		HideInfo ();
+		HideContent ();
 	}
 
-	public void ShowInfo(){		
+	public void ShowContent(){		
 		nowLookItem = this;
 		Anime.SetBool ("Show", true);
 	}
 
-	public void HideInfo(){
-		if (nowLookItem == this) {
-			VrTargetManager.instance.StartCoroutine (IeHideInfo ());
-		}
-	}
-
-	IEnumerator IeHideInfo(){
+	public void HideContent(){
 		nowLookItem = null;
 		Anime.SetBool ("Show", false);
-		yield return new WaitForSeconds (0.25f);
-		OnHideInfo ();
 	}
-	public virtual void OnHideInfo() {}
+
+	public virtual void OnHideContent() {}
 
 }

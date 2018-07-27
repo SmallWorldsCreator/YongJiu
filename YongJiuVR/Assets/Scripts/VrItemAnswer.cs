@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VrItemAnswer : VrItem {
-	public override void OnHideInfo() {
+	public override void OnHideContent() {
 		base.OnVrRunEvent ();
 		LevelManager.instance.EndLevel ();
 	}
