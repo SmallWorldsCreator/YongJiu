@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class GvrUIPointer : GvrBasePointer {
 	[NullAlarm]public Image centerPoint;
 	[NullAlarm]public Image lookRing;
-
+	public Color baseColor, hitColor;
 	public float maxReticleDistance = 50.0f;
 	public float enterRadius;
 	public float exitRadius;
@@ -19,7 +19,7 @@ public class GvrUIPointer : GvrBasePointer {
 	protected override void Start() {
 		base.Start();
 		lookRing.fillAmount = 0;
-		centerPoint.color = Color.white;
+		centerPoint.color = baseColor;
 	}
 
 	void Update () {
@@ -28,6 +28,7 @@ public class GvrUIPointer : GvrBasePointer {
 				lookRing.fillAmount = lookTime/clickDelayTime;
 				lookTime += Time.deltaTime;
 				if(lookTime >= clickDelayTime){
+					centerPoint.color = baseColor;
 					lookObj.OnVrRunEvent();
 				}
 			}else{
@@ -37,7 +38,7 @@ public class GvrUIPointer : GvrBasePointer {
 	}
 
 	void OnDisable () {
-		centerPoint.color = Color.white;
+		centerPoint.color = baseColor;
 		lookRing.fillAmount = 0;
 	}
 
@@ -54,7 +55,7 @@ public class GvrUIPointer : GvrBasePointer {
 			}
 		}
 		if(lookObj != null){
-			centerPoint.color = Color.red;
+			centerPoint.color = hitColor;
 			lookObj.OnVrPointEnter();
 		}
 		lookTime = 0;
@@ -71,7 +72,7 @@ public class GvrUIPointer : GvrBasePointer {
 			lookObj.OnVrPointExit();
 		}
 		lookObj = null;
-		centerPoint.color = Color.white;
+		centerPoint.color = baseColor;
 		lookRing.fillAmount = 0;
 	}
 

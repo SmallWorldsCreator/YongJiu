@@ -6316,14 +6316,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2d89a5f92f03449f2bd6c28c914115fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 088518cb3b8ef4c4da7a0544d6039cac, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7569,6 +7569,61 @@ Prefab:
     - target: {fileID: 1099844193630466, guid: dbfe06ae320cd88439692856bedd6d6c, type: 2}
       propertyPath: m_TagString
       value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: baseColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: baseColor.r
+      value: 0.016436001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: baseColor.g
+      value: 0.2670565
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: baseColor.b
+      value: 0.5588235
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: hitColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: hitColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: hitColor.g
+      value: 0.7241379
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115921005254200, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: hitColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20879294642408570, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20879294642408570, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20879294642408570, guid: dbfe06ae320cd88439692856bedd6d6c,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114283208834633028, guid: dbfe06ae320cd88439692856bedd6d6c, type: 2}
