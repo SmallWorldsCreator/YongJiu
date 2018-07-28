@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: fa4fa2c3ced3f0941b0797a9d3dfa1fb
+timeCreated: 1532791418
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: BASE002
+    100004: BASE003
+    100006: BASE004
+    100008: BASE007
+    100010: BASE008
+    100012: BASE009
+    100014: BASE010
+    100016: BASE011
+    100018: Box001
+    100020: Box004
+    100022: Box010
+    100024: Box011
+    100026: Box013
+    100028: Box016
+    100030: Box034
+    100032: Box037
+    100034: Box038
+    100036: Box039
+    100038: Box040
+    100040: Box041
+    100042: Box043
+    100044: Box044
+    100046: Box045
+    100048: Box_DOWN
+    100050: Box_Top
+    100052: choco_box
+    100054: ENBbook
+    100056: floor
+    100058: frame
+    100060: Glasses
+    100062: Glasses_Alpha
+    100064: kanban
+    100066: LittleMary
+    100068: Outside_pillar
+    100070: Outside_pillar2
+    100072: OutsideDesk
+    100074: Phone
+    100076: roof
+    100078: Showcase
+    100080: Wall
+    400000: //RootNode
+    400002: BASE002
+    400004: BASE003
+    400006: BASE004
+    400008: BASE007
+    400010: BASE008
+    400012: BASE009
+    400014: BASE010
+    400016: BASE011
+    400018: Box001
+    400020: Box004
+    400022: Box010
+    400024: Box011
+    400026: Box013
+    400028: Box016
+    400030: Box034
+    400032: Box037
+    400034: Box038
+    400036: Box039
+    400038: Box040
+    400040: Box041
+    400042: Box043
+    400044: Box044
+    400046: Box045
+    400048: Box_DOWN
+    400050: Box_Top
+    400052: choco_box
+    400054: ENBbook
+    400056: floor
+    400058: frame
+    400060: Glasses
+    400062: Glasses_Alpha
+    400064: kanban
+    400066: LittleMary
+    400068: Outside_pillar
+    400070: Outside_pillar2
+    400072: OutsideDesk
+    400074: Phone
+    400076: roof
+    400078: Showcase
+    400080: Wall
+    2100000: No Name
+    2100002: 03 - Default
+    2100004: 09 - Default
+    2100006: 08 - Default
+    2100008: 02 - Default
+    2100010: 01 - Default
+    2100012: 07 - Default
+    2300000: BASE002
+    2300002: BASE003
+    2300004: BASE004
+    2300006: BASE007
+    2300008: BASE008
+    2300010: BASE009
+    2300012: BASE010
+    2300014: BASE011
+    2300016: Box001
+    2300018: Box004
+    2300020: Box010
+    2300022: Box011
+    2300024: Box013
+    2300026: Box016
+    2300028: Box034
+    2300030: Box037
+    2300032: Box038
+    2300034: Box039
+    2300036: Box040
+    2300038: Box041
+    2300040: Box043
+    2300042: Box044
+    2300044: Box045
+    2300046: Box_DOWN
+    2300048: Box_Top
+    2300050: choco_box
+    2300052: ENBbook
+    2300054: floor
+    2300056: frame
+    2300058: Glasses
+    2300060: Glasses_Alpha
+    2300062: kanban
+    2300064: LittleMary
+    2300066: Outside_pillar
+    2300068: Outside_pillar2
+    2300070: OutsideDesk
+    2300072: Phone
+    2300074: roof
+    2300076: Showcase
+    2300078: Wall
+    3300000: BASE002
+    3300002: BASE003
+    3300004: BASE004
+    3300006: BASE007
+    3300008: BASE008
+    3300010: BASE009
+    3300012: BASE010
+    3300014: BASE011
+    3300016: Box001
+    3300018: Box004
+    3300020: Box010
+    3300022: Box011
+    3300024: Box013
+    3300026: Box016
+    3300028: Box034
+    3300030: Box037
+    3300032: Box038
+    3300034: Box039
+    3300036: Box040
+    3300038: Box041
+    3300040: Box043
+    3300042: Box044
+    3300044: Box045
+    3300046: Box_DOWN
+    3300048: Box_Top
+    3300050: choco_box
+    3300052: ENBbook
+    3300054: floor
+    3300056: frame
+    3300058: Glasses
+    3300060: Glasses_Alpha
+    3300062: kanban
+    3300064: LittleMary
+    3300066: Outside_pillar
+    3300068: Outside_pillar2
+    3300070: OutsideDesk
+    3300072: Phone
+    3300074: roof
+    3300076: Showcase
+    3300078: Wall
+    4300000: Box001
+    4300002: Box004
+    4300004: Box010
+    4300006: Box011
+    4300008: Box013
+    4300010: Box016
+    4300012: LittleMary
+    4300014: Box034
+    4300016: Wall
+    4300018: frame
+    4300020: BASE002
+    4300022: BASE003
+    4300024: BASE004
+    4300026: Box037
+    4300028: BASE007
+    4300030: BASE008
+    4300032: Box038
+    4300034: Box039
+    4300036: Showcase
+    4300038: floor
+    4300040: Box040
+    4300042: BASE009
+    4300044: BASE010
+    4300046: BASE011
+    4300048: Box041
+    4300050: Box043
+    4300052: Box044
+    4300054: Box045
+    4300056: Box_DOWN
+    4300058: ENBbook
+    4300060: Glasses
+    4300062: Glasses_Alpha
+    4300064: choco_box
+    4300066: kanban
+    4300068: Box_Top
+    4300070: Outside_pillar
+    4300072: Outside_pillar2
+    4300074: roof
+    4300076: OutsideDesk
+    4300078: Phone
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : ManagerBase<LevelManager> {
-	public E_LEVEL nowLevel = E_LEVEL.None;
+	public int nowLevelMask = 0;
 	public List<LevelObj> levelObjs;
 
 	public override void Init () {
@@ -24,37 +24,29 @@ public class LevelManager : ManagerBase<LevelManager> {
 		
 	}
 
-	public void StartLevel (E_LEVEL p_level) {
-		Debug.Log ("StartLevel : " + p_level);
-		nowLevel = p_level;
-		if (nowLevel != E_LEVEL.None) {
+	bool LevelIsRun(E_LEVEL p_level){
+		return (((1 << (int)p_level) & nowLevelMask) != 0);
+	}
 
-			for(int f=0; f<(int)E_LEVEL.Len; f++){
-				LevelObj _levelObj = levelObjs [f];
-				if(_levelObj != null){
-					if (f == (int)nowLevel) {
-						_levelObj.ChangeState (E_LEVEL_STATE.inLevel);
-					}else if(_levelObj.state == E_LEVEL_STATE.before){
-						_levelObj.ChangeState (E_LEVEL_STATE.inOtherLevel);
-					}
-				}
+	public void StartLevel (E_LEVEL p_level) {
+		Debug.Log ("StartLevel : " + p_level.ToString());
+		nowLevelMask |= (1<<(int)p_level);
+		if (p_level != E_LEVEL.None) {
+
+			LevelObj _levelObj = levelObjs [(int)p_level];
+			if(_levelObj != null){
+				_levelObj.ChangeState (E_LEVEL_STATE.inLevel);
 			}
 		}
 	}
-	public void EndLevel () {
-		if (nowLevel != E_LEVEL.None) {
-			Debug.Log ("EndLevel : " + nowLevel);
-			for(int f=0; f<(int)E_LEVEL.Len; f++){
-				LevelObj _levelObj = levelObjs [f];
-				if(_levelObj != null){
-					if (f == (int)nowLevel) {
-						_levelObj.ChangeState (E_LEVEL_STATE.after);
-					}else if(_levelObj.state == E_LEVEL_STATE.inOtherLevel){
-						_levelObj.ChangeState (E_LEVEL_STATE.before);
-					}
-				}
+	public void EndLevel (E_LEVEL p_level) {
+		if (LevelIsRun(p_level)) {
+			Debug.Log ("EndLevel : " + p_level.ToString());
+			LevelObj _levelObj = levelObjs [(int)p_level];
+			if(_levelObj != null){
+				_levelObj.ChangeState (E_LEVEL_STATE.after);
 			}
-			nowLevel = E_LEVEL.None;
+			nowLevelMask &= ~(1<<(int)p_level);
 		}
 	}
 }
