@@ -39,8 +39,8 @@ public class TextAnswer : MonoBehaviour {
 	}
 	void CheckAnswer () {
 		if (anyOrder) {
-			string _noOrderAnswer = string.Concat (answer.OrderBy (c => c));
-			string _noOrderNowAnswer = string.Concat (nowString.OrderBy (c => c));
+			string _noOrderAnswer = SortString (answer);
+			string _noOrderNowAnswer = SortString (nowString);
 			if (_noOrderAnswer == _noOrderNowAnswer) {
 				answerItem.ShowContent ();
 				return;
@@ -54,5 +54,11 @@ public class TextAnswer : MonoBehaviour {
 
 		Clear ();
 		text.text = failInfo;
+	}
+
+	static string SortString(string p_input){
+		char[] _chars = p_input.ToArray();
+		System.Array.Sort(_chars);
+		return new string(_chars);
 	}
 }

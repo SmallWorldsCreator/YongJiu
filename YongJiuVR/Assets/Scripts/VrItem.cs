@@ -45,7 +45,7 @@ public class VrItem : VrTarget {
 		if (infoObj != null) {
 			infoObj.position = VrPlayerManager.instance.infoAnchor.position;
 			infoObj.rotation = VrPlayerManager.instance.infoAnchor.rotation;
-			GameObjectExtend.SetLossyScale (transform, VrPlayerManager.instance.infoAnchor.lossyScale);
+			GameObjectExtend.SetLossyScale (infoObj.transform, VrPlayerManager.instance.infoAnchor.lossyScale);
 		}
 		VrTargetManager.instance.nowLookItem = this;
 		VrTargetManager.instance.nowItemCloseBut = closeBut;
