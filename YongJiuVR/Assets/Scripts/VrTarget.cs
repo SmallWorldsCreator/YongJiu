@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VrTarget : MonoBehaviour {
 	public Collider collider;
+	public VrTarget[] subTargets;
 
 	public virtual void OnVrPointEnter() {}
 	public virtual void OnVrPointExit() {}
@@ -12,11 +13,21 @@ public class VrTarget : MonoBehaviour {
 	public virtual void OnCloseTarget() {}
 
 	public void OpenTarget() {
-		collider.enabled = true;
+		if (collider != null) {
+			collider.enabled = true;
+		}
 		OnOpenTarget ();
+		foreach (VrTarget _target in subTargets) {
+			_target.OpenTarget ();
+		}
 	}
 	public void CloseTarget() {
-		collider.enabled = false;
+		if (collider != null) {
+			collider.enabled = false;
+		}
 		OnCloseTarget ();
+		foreach (VrTarget _target in subTargets) {
+			_target.CloseTarget ();
+		}
 	}
 }

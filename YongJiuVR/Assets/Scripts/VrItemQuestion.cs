@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VrItemQuestion : VrItem {
 	public E_LEVEL startLevel;
-	public override void OnHideContent() {
+	public override void OnContentDone() {
 		LevelManager.instance.StartLevel (startLevel);
 	}
 }

@@ -45,7 +45,14 @@ public class GvrUIPointer : GvrBasePointer {
 
 	public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive) {
 //		Debug.Log("OnPointerEnter");
+
 		lookObj = raycastResultResult.gameObject.GetComponent<VrTarget>();
+		if (VrTargetManager.instance.nowItemCloseBut != null) {
+			if (lookObj != VrTargetManager.instance.nowItemCloseBut) {
+				lookObj = null;
+				return;
+			}
+		}
 		if(lookObj != null){
 			centerPoint.color = Color.red;
 			lookObj.OnVrPointEnter();

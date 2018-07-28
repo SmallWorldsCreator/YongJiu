@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VrTargetManager : ManagerBase<VrTargetManager> {
 	[NullAlarm]public FloorPoint firstFloor;
+	[NullAlarm]public VrItem nowLookItem;
+	[LockInInspector]public VrCloseContent nowItemCloseBut;
 	List<VrTarget> targets = new List<VrTarget>();
 	// Use this for initialization
 	public override void Init () {
