@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="yongjiu227s" size="1.000000 1.481884" />
+    <ImageTarget name="yongjiu104s" size="1.000000 1.431953" />
+    <ImageTarget name="yongjiu084s" size="1.000000 1.453032" />
+    <ImageTarget name="yongjiu083s" size="1.000000 1.446009" />
+    <ImageTarget name="yongjiu062s" size="1.000000 1.492683" />
+    <ImageTarget name="yongjiu025s" size="1.000000 1.462366" />
+    <ImageTarget name="yongjiu018s" size="1.000000 1.504890" />
+    <ImageTarget name="yongjiu015s" size="1.000000 1.483544" />
     <ImageTarget name="yongjiu000" size="1.000000 1.444574" />
   </Tracking>
 </QCARConfig>
