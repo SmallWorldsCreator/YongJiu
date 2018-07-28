@@ -5,6 +5,7 @@ using UnityEngine;
 public class VrItem : VrTarget {
 	[NullAlarm]public Animator Anime;
 	[NullAlarm]public VrCloseContent closeBut;
+	[NullAlarm]public Transform infoObj;
 	// Use this for initialization
 	void Start () {
 		if (closeBut != null) {
@@ -40,6 +41,10 @@ public class VrItem : VrTarget {
 		Anime.SetBool ("Show", true);
 		if (closeBut != null) {
 			closeBut.OpenTarget ();
+		}
+		if (infoObj != null) {
+			infoObj.position = VrPlayerManager.instance.infoAnchor.position;
+			infoObj.rotation = VrPlayerManager.instance.infoAnchor.rotation;
 		}
 		VrTargetManager.instance.nowLookItem = this;
 		VrTargetManager.instance.nowItemCloseBut = closeBut;
