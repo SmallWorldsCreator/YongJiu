@@ -9,7 +9,7 @@ public class VrPlayer : MonoBehaviour {
 	public float moveSpeed;
 	// Use this for initialization
 	void Start () {
-		targetPos = transform.position;
+		
 	}
 	
 	// Update is called once per frame
@@ -24,5 +24,7 @@ public class VrPlayer : MonoBehaviour {
 
 	public void SetTargetPos (Vector3 p_pos) {
 		targetPos = p_pos;
+		isMoving = true;
+
 	}
 }

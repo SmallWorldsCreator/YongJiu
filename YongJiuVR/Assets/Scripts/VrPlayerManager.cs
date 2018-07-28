@@ -7,7 +7,7 @@ public enum E_VR_PLAYER_STATE{
 	move
 }
 public class VrPlayerManager : ManagerBase<VrPlayerManager> {
-	E_VR_PLAYER_STATE state;
+	[LockInInspector]public E_VR_PLAYER_STATE state;
 	[NullAlarm]public VrPlayer player;
 	[NullAlarm]public GvrUIPointer pointer;
 	[NullAlarm]public Transform infoAnchor;
@@ -35,6 +35,7 @@ public class VrPlayerManager : ManagerBase<VrPlayerManager> {
 	}
 
 	void ChangeState (E_VR_PLAYER_STATE p_state) {
+		Debug.Log ("Player ChangeState : " + p_state.ToString());
 		if(state != p_state){
 			state = p_state;
 			switch(state){
