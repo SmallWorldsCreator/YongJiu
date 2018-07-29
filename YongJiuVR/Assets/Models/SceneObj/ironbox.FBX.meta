@@ -1,23 +1,22 @@
 fileFormatVersion: 2
-guid: 5d6fe3bdee601ea4ba9466a82ecd3134
-timeCreated: 1532828590
+guid: d2b9d8735742bb14a83e88d6fadb1cec
+timeCreated: 1532839177
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: 'Material #10'
     2300000: //RootNode
     3300000: //RootNode
     4300000: Ironbox
-    9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 4cf094ff9adedb34898eb75014af95e2, type: 2}
+      name: 'Material #10'
+    second: {fileID: 2100000, guid: 154f6e0fbafac4d4c9846e10ff1cf7f6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -91,7 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
