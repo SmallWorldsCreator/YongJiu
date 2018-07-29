@@ -16,12 +16,16 @@ public class VrPlayerManager : ManagerBase<VrPlayerManager> {
 	// Use this for initialization
 	void Start () {
 	}
-	
+	SoundPlayObj soundPlayObj;
 	// Update is called once per frame
 	void Update () {
 		switch(state){
-		case E_VR_PLAYER_STATE.idle:	IdleUpdate();	break;
-		case E_VR_PLAYER_STATE.move:	MoveUpdate();	break;
+		case E_VR_PLAYER_STATE.idle:
+			IdleUpdate ();
+			break;
+		case E_VR_PLAYER_STATE.move:
+			MoveUpdate();
+			break;
 		}
 	}
 
@@ -42,10 +46,14 @@ public class VrPlayerManager : ManagerBase<VrPlayerManager> {
 			case E_VR_PLAYER_STATE.idle:
 				pointer.enabled = true;
 				VrTargetManager.instance.OpenTargetAtFloorPoint (nowFloorPoint);
+				if (soundPlayObj != null) {
+					soundPlayObj.Stop ();
+				}
 				break;
 			case E_VR_PLAYER_STATE.move:
 				pointer.enabled = false;
 				VrTargetManager.instance.CloseAllTarget ();
+				soundPlayObj = SoundManager.Play ("SoundTable","walking");
 				break;
 			}
 		}

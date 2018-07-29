@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e3e291af112d74e82431e65ae41152, type: 3}
+  m_Name: SoundTable
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: d3f05818c7906284eba30535d0303e1a, type: 2}
+  soundList:
+  - table: {fileID: 11400000}
+    key: begin
+    clip: {fileID: 8300000, guid: bb0444fb702d3f74fa071eaec7160745, type: 3}
+    defaultVolume: 1
+    defaultLoop: 0
+  - table: {fileID: 11400000}
+    key: GarageDoor
+    clip: {fileID: 8300000, guid: 0f9488c2f8a12b347bc722469ec9ec78, type: 3}
+    defaultVolume: 1
+    defaultLoop: 0
+  - table: {fileID: 11400000}
+    key: No
+    clip: {fileID: 8300000, guid: 7aef77e0c1823784790c86d7be23d7a7, type: 3}
+    defaultVolume: 1
+    defaultLoop: 0
+  - table: {fileID: 11400000}
+    key: Pop
+    clip: {fileID: 8300000, guid: f9e3cdc31ff1c2f489ba24baeb995ab9, type: 3}
+    defaultVolume: 1
+    defaultLoop: 0
+  - table: {fileID: 11400000}
+    key: walking
+    clip: {fileID: 8300000, guid: 249606315e5f2654abeacab6e87bd782, type: 3}
+    defaultVolume: 1
+    defaultLoop: 1
+  - table: {fileID: 11400000}
+    key: Yes
+    clip: {fileID: 8300000, guid: e5cd2b88d5bec0042b9c91a53be6281e, type: 3}
+    defaultVolume: 1
+    defaultLoop: 0

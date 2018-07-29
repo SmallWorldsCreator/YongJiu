@@ -46,15 +46,22 @@ public class VrItem : VrTarget {
 			infoObj.position = VrPlayerManager.instance.infoAnchor.position;
 			infoObj.rotation = VrPlayerManager.instance.infoAnchor.rotation;
 			GameObjectExtend.SetLossyScale (infoObj.transform, VrPlayerManager.instance.infoAnchor.lossyScale);
+			SoundManager.Play ("SoundTable","Pop");
 		}
 		VrTargetManager.instance.nowLookItem = this;
 		VrTargetManager.instance.nowItemCloseBut = closeBut;
+
+		OnShowContent ();
 	}
 
 	public void HideContent(){
 		Anime.SetBool ("Show", false);
 		VrTargetManager.instance.nowLookItem = null;
 		VrTargetManager.instance.nowItemCloseBut = null;
+	}
+
+	public virtual void OnShowContent() {
+
 	}
 
 	public virtual void OnContentDone() {
