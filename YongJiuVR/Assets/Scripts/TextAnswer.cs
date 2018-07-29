@@ -5,6 +5,8 @@ using System.Linq;
 public class TextAnswer : MonoBehaviour {
 	[NullAlarm]public VrItemAnswer answerItem;
 	[NullAlarm]public TextMesh text;
+	[NullAlarm]public VrItemKey[] clearTargets;
+
 	public bool anyOrder;
 	[LessAlarm(0)]public int stringCount;
 	int nowStringCount = 0;
@@ -24,8 +26,17 @@ public class TextAnswer : MonoBehaviour {
 		nowString = "";
 		text.text = "";
 		nowStringCount = 0;
+
+		foreach (VrItemKey _clearTarget in clearTargets) {
+			_clearTarget.render.material = _clearTarget.normalMate;
+		}
 	}
 	public void AddString (string p_string) {
+		if (p_string == "Clear") {
+			Clear ();
+			return;
+		}
+
 		if (nowStringCount == 0) {
 			nowString = p_string;
 		} else {

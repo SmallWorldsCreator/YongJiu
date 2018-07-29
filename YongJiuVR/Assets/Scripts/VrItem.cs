@@ -57,6 +57,8 @@ public class VrItem : VrTarget {
 		VrTargetManager.instance.nowItemCloseBut = null;
 	}
 
-	public virtual void OnContentDone() {}
+	public virtual void OnContentDone() {
+		
+	}
 
 }
