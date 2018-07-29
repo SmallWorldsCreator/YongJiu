@@ -20,7 +20,17 @@ ModelImporter:
     4300000: "\uFF46\uFF4F\uFF4F\uFF44\uFF42\uFF4F\uFF58"
     4300002: surfaceobj
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: fc7f31d5c5637bd49a9987dee9c90dfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: foodplan
+    second: {fileID: 2100000, guid: af0ea2d176f15ba41987260b42b95d87, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,7 +60,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 40
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -69,7 +79,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
